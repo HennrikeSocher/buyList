@@ -96,9 +96,9 @@ header {
 
         & .checkbox-image {
           background-image: url(/assets/checkbox.svg);
-          flex: 0 0 0 17spx;
-          height: 17px;
-          width: 17px;
+          flex: 0 0 0 16px;
+          height: 16.5px;
+          width: 16px;
         }
 
         &:hover,
@@ -139,4 +139,8 @@ header {
   & :last-child {
     margin-left: auto;
   }
+}
+
+.hidden {
+  visibility: hidden;
 }
