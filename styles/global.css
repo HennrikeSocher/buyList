@@ -5,8 +5,8 @@
 }
 
 :root {
-  --backgroud-primary: #f4f5fb;
-  --backgroud-secondary: #ffffff;
+  --background-primary: #f4f5fb;
+  --background-secondary: #ffffff;
 
   --color-brand: #ca3884;
   --color-brand-hover: #a52c8b;
@@ -25,5 +25,21 @@
   --title: 800 24px/32px var(--font);
   --label: 600 16px/20px var(--font);
   --paragraph: 400 16px/20px var(--font);
-  --link: 400 14px/16px var(--font);
+  --link: 600 14px/16px var(--font);
+}
+
+body {
+  font-family: var(--font);
+  background-color: var(--background-primary);
+  color: var(--content-primary);
+}
+
+.container {
+  margin-inline: auto;
+  max-width: 627px;
+}
+
+img {
+  max-width: 100%;
+  height: 100%;
 }

@@ -1,0 +1,142 @@
+header {
+  text-align: center;
+  margin-block: 20px;
+}
+
+.week-buys {
+  margin: 30px 0;
+
+  & a {
+    display: block;
+    font: var(--link);
+    color: var(--color-brand);
+    margin-bottom: 10px;
+    text-decoration: none;
+  }
+
+  & h2 {
+    font: var(--title);
+  }
+}
+
+.add-item {
+  display: flex;
+  gap: 16px;
+
+  & input {
+    width: 450px;
+    height: 44px;
+    padding: 16px;
+    border: solid 2px var(--border-primary);
+    border-radius: 12px;
+    font: var(--paragraph);
+  }
+
+  & input::placeholder {
+    font: var(--paragraph);
+    color: var(--border-primary);
+  }
+
+  & input:hover {
+    outline: none;
+    cursor: pointer;
+    border: 2px solid var(--border-hover);
+  }
+
+  & input:focus {
+    outline: none;
+    border: 2px solid var(--color-brand);
+  }
+
+  & button {
+    width: 160px;
+    height: 44px;
+    border: none;
+    border-radius: 12px;
+    font: var(--link);
+    background-color: var(--color-brand);
+    color: var(--always-white);
+    cursor: pointer;
+  }
+
+  & button:hover {
+    background-color: var(--color-brand-hover);
+  }
+}
+
+#list {
+  & ul {
+    margin-block: 36px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    & li {
+      list-style: none;
+
+      display: flex;
+      gap: 12px;
+      align-items: center;
+
+      padding: 12px;
+      height: 50px;
+
+      background-color: var(--background-secondary);
+      border-radius: 12px;
+
+      & .checkbox-wrapper {
+        position: relative;
+
+        & [type="checkbox"] {
+          all: unset;
+          position: absolute;
+          inset: 0;
+        }
+
+        & .checkbox-image {
+          background-image: url(/assets/checkbox.svg);
+          flex: 0 0 0 17spx;
+          height: 17px;
+          width: 17px;
+        }
+
+        &:hover,
+        &:focus-within {
+          .checkbox-image {
+            background-image: url(/assets/checkbox-hover.svg);
+            height: 17px;
+            width: 17px;
+          }
+        }
+        &:has(:checked) .checkbox-image {
+          background-image: url(/assets/checkbox-selected.svg);
+          height: 17px;
+          width: 17px;
+        }
+      }
+
+      & img {
+        margin-left: auto;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+#alert {
+  height: 44px;
+  border-radius: 12px;
+  background-color: var(--color-danger);
+  color: var(--always-white);
+  font: var(--label);
+  padding: 12px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  & :last-child {
+    margin-left: auto;
+  }
+}

@@ -5,53 +5,86 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>quicklist</title>
+    <link rel="stylesheet" href="styles/index.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-    <header>
-      <img src="assets/logo.svg" alt="logo quicklist" />
-    </header>
-    <div class="week-buys">
-      <p><- Voltar</p>
-      <h2>Compras da semana</h2>
-    </div>
-    <div class="add-item">
-      <input id="add-input" type="text" />
-      <button id="add-button">Adicionar item</button>
-    </div>
-    <section id="list">
-      <ul class="items">
-        <li class="item">
-          <input type="checkbox" name="check-item" id="check-item" />
-          <p>Pão de forma</p>
-          <img src="assets/delete-02-stroke-rounded.svg" alt="delete icon" />
-        </li>
-        <li class="item">
-          <input type="checkbox" name="check-item" id="check-item" />
-          <p>Café preto</p>
-          <img src="assets/delete-02-stroke-rounded.svg" alt="delete icon" />
-        </li>
-        <li class="item">
-          <input type="checkbox" name="check-item" id="check-item" />
-          <p>Suco de laranja</p>
-          <img src="assets/delete-02-stroke-rounded.svg" alt="delete icon" />
-        </li>
-        <li class="item">
-          <input type="checkbox" name="check-item" id="check-item" />
-          <p>Bolacha</p>
-          <img src="assets/delete-02-stroke-rounded.svg" alt="delete icon" />
-        </li>
-      </ul>
-    </section>
+    <main>
+      <header>
+        <img src="assets/logo.svg" alt="logo quicklist" />
+      </header>
+      <div class="container">
+        <div class="week-buys">
+          <a href=""><- Voltar</a>
+          <h2>Compras da semana</h2>
+        </div>
+        <div class="add-item">
+          <input
+            id="add-input"
+            type="text"
+            placeholder="Adicione um novo item"
+          />
+          <button id="add-button">Adicionar item</button>
+        </div>
+        <section id="list">
+          <ul class="items">
+            <li class="item">
+              <div class="checkbox-wrapper">
+                <div class="checkbox-image"></div>
+                <input type="checkbox" name="check-item" id="check-item" />
+              </div>
+              <p>Pão de forma</p>
+              <img
+                src="assets/delete-02-stroke-rounded.svg"
+                alt="delete icon"
+              />
+            </li>
+            <li class="item">
+              <div class="checkbox-wrapper">
+                <div class="checkbox-image"></div>
+                <input type="checkbox" name="check-item" id="check-item" />
+              </div>
+              <p>Café preto</p>
+              <img
+                src="assets/delete-02-stroke-rounded.svg"
+                alt="delete icon"
+              />
+            </li>
+            <li class="item">
+              <div class="checkbox-wrapper">
+                <div class="checkbox-image"></div>
+                <input type="checkbox" name="check-item" id="check-item" />
+              </div>
+              <p>Suco de laranja</p>
+              <img
+                src="assets/delete-02-stroke-rounded.svg"
+                alt="delete icon"
+              />
+            </li>
+            <li class="item">
+              <div class="checkbox-wrapper">
+                <div class="checkbox-image"></div>
+                <input type="checkbox" name="check-item" id="check-item" />
+              </div>
+              <p>Bolacha</p>
+              <img
+                src="assets/delete-02-stroke-rounded.svg"
+                alt="delete icon"
+              />
+            </li>
+          </ul>
+        </section>
 
-    <div id="alert">
-      <img src="/assets/alert-circle-stroke-rounded.svg" alt="alert icon" />
-      <p>O item foi removido da lista</p>
-      <img src="/assets/cancel-01-stroke-rounded.svg" alt="close icon" />
-    </div>
+        <div id="alert" class="hidden">
+          <img src="/assets/alert-circle-stroke-rounded.svg" alt="alert icon" />
+          <p>O item foi removido da lista</p>
+          <img src="/assets/cancel-01-stroke-rounded.svg" alt="close icon" />
+        </div>
+      </div>
+    </main>
   </body>
 </html>
